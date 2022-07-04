@@ -1,0 +1,229 @@
+/* CSS styles for my cv index.html */
+
+/* BOX MODEL */
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    margin: 0px;
+}
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding: 30px;
+    background-color: rgb(255, 251, 246);
+    border: 1px solid #cbcbcb;
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2);
+}
+#avatar {
+    width: 260px;
+    border-radius: 50%;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
+    /* margin-left: 50px; */
+}
+
+/* FONTS */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+body {
+    /* font-family: "Roboto", sans-serif; */
+    /* font-size: 16px; */
+    /* font-weight: 500; */
+    font: normal 14px "Roboto", sans-serif;
+    background-color: #e7e7e7;
+    color: #182644;
+}
+#myname {
+    font-family: Verdana;
+    /* text-decoration: underline; */
+    font-size: 22px;
+    border-bottom: 1px solid #ccc;
+}
+.textinfo {
+    /* font-style: italic; */
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    margin-bottom: 0px;
+}
+.addinfo {
+    color: rgb(148, 137, 137);
+    padding-left: 12px;
+}
+.textinfo h2 {
+    padding-left: 6px;
+    border-bottom: 1px solid #ccc;
+}
+.textinfo .links {
+    padding: 6px 12px;
+}
+
+/* LINKS */
+
+a {
+    color: #333;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+a:hover {
+    color: rgb(255, 68, 0);
+    font-size: 17px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+/* a:visited { */
+/* color: rgb(158, 84, 163); */
+/* } */
+a:active {
+    color: blueviolet;
+}
+/* .socials:hover { */
+/* background-color: rgb(219, 219, 219); */
+/* } */
+.btn {
+    background-color: #111;
+    color: #fff;
+    padding: 5px 12px;
+    border: 2px solid gray;
+    cursor: pointer;
+    border-radius: 6px;
+    opacity: 0.9;
+    transition: all 0.2s;
+}
+.btn:hover {
+    opacity: 1;
+}
+
+/* LISTS */
+
+.socials a {
+    margin-left: 10px;
+    padding: 5px 0px;
+}
+.form_contact h2 {
+    text-align: center;
+    margin: 10px 0px;
+}
+.form_group label {
+    display: block;
+    margin: 0px;
+    color: gray;
+}
+.form_group input,
+textarea {
+    width: 100%;
+    border: none;
+    background: transparent;
+    box-sizing: border-box;
+    border-bottom: 1px solid black;
+    margin-bottom: 6px;
+    color: black;
+    padding: 8px 4px;
+    outline: none;
+    font-family: inherit;
+}
+.form_row {
+    margin-bottom: 10px;
+    display: flex;
+}
+.form_row .form_group {
+    /* display: inline-block; */
+    /* width: calc(50% - 20px); */
+    width: 50%;
+    margin-right: 20px;
+}
+/* .form_row .form_group:last-child {
+    margin-right: 0px;
+} */
+.info {
+    display: flex;
+    margin-bottom: 20px;
+}
+.textinfo {
+    padding-left: 30px;
+}
+.textinfo h2 {
+    margin-top: 16px;
+}
+
+/* BORDERS */
+
+/* .socials {
+    background-color: rgb(199, 199, 199);
+    border-radius: 16px;
+} */
+.hobbies {
+    background-color: rgb(109, 219, 155);
+    border-radius: 16px;
+}
+.experience {
+    background-color: rgb(226, 128, 128);
+    border-radius: 16px;
+}
+
+/* MEDIA */
+
+@media (max-width: 610px) {
+    body {
+        padding: 0px 6px;
+    }
+    .container {
+        padding: 10px;
+        font-size: 12px;
+    }
+    .info {
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .textinfo {
+        padding-left: 15px;
+    }
+    .textinfo h2 {
+        margin-top: 8px;
+    }
+    .form_row {
+        margin-bottom: 10px;
+        display: block;
+    }
+    .form_row .form_group {
+        width: 100%;
+    }
+    #avatar {
+        width: 240px;
+    }
+}
+
+#myname {
+    margin: 12px 4px;
+}
+.textinfo {
+    padding: 0px 20px;
+}
+.socials {
+    padding: 10px 10px;
+    margin: 6px 10px;
+}
+.hobbies {
+    padding: 10px 10px;
+    margin: 6px 10px;
+}
+.experience {
+    padding: 10px 10px;
+    margin: 6px 10px;
+    margin-bottom: 12px;
+}
+#ol_hobbies {
+    padding-left: 40px;
+}
+/* #contactme {
+    line-height: 12px;
+    margin: 4px 14px;
+}
+.send {
+    letter-spacing: 20px;
+} */
