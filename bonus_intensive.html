@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Addexersice</title>
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Finlandica&display=swap");
+            body {
+                font-family: "Finlandica", sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                transition: all 0.25s;
+                background: url(imgs/eclipse.jpg) center no-repeat;
+                color: white;
+            }
+            div {
+                text-align: center;
+            }
+            button {
+                border: 1px solid rgb(255, 255, 255);
+                padding: 15px 20px;
+                border-radius: 20px;
+                background: transparent;
+                cursor: pointer;
+                outline: none;
+                color: white;
+                margin-bottom: 20px;
+            }
+            /* #changename {
+                border: 1px solid rgb(255, 255, 255);
+                padding: 15px 20px;
+                border-radius: 20px;
+                background: transparent;
+                cursor: pointer;
+                outline: none;
+                color: white;
+            } */
+
+            h1,
+            h3 {
+                animation: down 1s;
+            }
+            @keyframes down {
+                from {
+                    transform: translateY(-50px);
+                }
+                to {
+                    transform: translateY(0);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="">
+            <h3>Hello world!</h3>
+            <h1>Now 12:12:12</h1>
+            <button>Change background</button><br />
+            <!-- <button id="change_name">Change your name</button> -->
+        </div>
+        <script>
+            let name;
+
+            if (localStorage.getItem("my-name")) {
+                name = localStorage.getItem("my-name");
+            } else {
+                name = prompt("What is your name ?");
+                localStorage.setItem("my-name", name);
+            }
+
+            document.querySelector("h3").textContent = "Hello " + name + "!";
+            document.querySelector("h1").textContent = "Now " + new Date().toLocaleTimeString();
+            setInterval(function () {
+                document.querySelector("h1").textContent = "Now " + new Date().toLocaleTimeString();
+            }, 1000);
+
+            const colors = ["indigo", "violet", "darkred", "coral", "orange"];
+            let index = 0;
+
+            document.querySelector("button").onclick = function () {
+                document.body.style.background = colors[index];
+                index++;
+                if (index >= colors.length) index = 0;
+            };
+            // document.querySelector("button").onclick = function () {
+            //     name = prompt("What is your name ?");
+            //     localStorage.setItem("my-name", name);
+            // };
+        </script>
+    </body>
+</html>
